@@ -23,4 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 cypress.env.json
-cypress/integration/examples/
+cypress/integration/examples
+/cypress/videos
+/cypress/screenshots
