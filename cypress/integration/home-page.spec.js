@@ -78,8 +78,8 @@ describe("Home Page ", () => {
       });
     });
     describe("By movie title and genre", () => {
-      it("should display movies with 'p ' in the title and with the specified genre only", () => {
-        const searchString = "p";
+      it("should display movies with 't ' in the title and with the specified genre only", () => {
+        const searchString = "t";
         const selectedGenreId = 35;
         const selectedGenreText = "Comedy";
         const matchingGenres = filterByGenre(movies, selectedGenreId);
