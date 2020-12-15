@@ -5,7 +5,6 @@ image: cypress/browsers:node12.0.0-chrome73
 stages:
   - install
   - build
-  - exercise_stage
   - test
 
 variables:
@@ -36,30 +35,11 @@ bundle_app:
     paths:
       - build/
 
-build_jobX:
-  stage: build
-  only:
-    - demobranch
-  script:
-    - echo "build job X on demoBranch works"
-
-exercise_job:
-  stage: exercise_stage
-  only:
-    - main
-  script:
-    - echo "exercise job on main branch works"
-
-test_jobX:
-  stage: test
-  only:
-    - main
-    - demobranch2
-  script:
-    - echo "test job X"
-
 e2etest:
   stage: test
+  only:
+    - staging
+    - main
   before_script:
     - npm install -g http-server
     - npm install cypress
